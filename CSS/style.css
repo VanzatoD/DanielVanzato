@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*modo diurno*/
+body {
+    background-color: #f5f5f5;
+    color: #171717;
+    font-family: Arial, sans-serif;
+}
+header {
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #ada9a9;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: end;
+    height: 65px;
+    padding: 0 10px 10px;
+    position: sticky;
+    top: 0;
+}
+#tema{
+  background-color: #f5f5f5;
+  color:#171717;
+  padding: 10px;
+  margin-right: auto;
+  border: 3px solid #383838;
+  border-radius: 5px;
+  box-sizing:content-box;
+  width: 90px;
+  white-space: nowrap;
+}
+#sobre div{
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  width: auto;
+
+}
+#sobre p{
+ width:80%;
+}
+#sobre img{
+  height: 400px;
+  width: 400px;
+  border-radius: 50px;
+  border: #ada9a9 solid 5px;
+}
+nav {
+   grid-column: 2;
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: #171717;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav a:hover, nav.noturno a:hover {
+    color: #ed1232;
+}
+
+/* Seções */
+section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 50px 32px;
+}
+
+h1, h2 {
+    margin-bottom: 24px;
+}
+
+h1 {
+    font-size: 100px;
+}
+
+h2 {
+    font-size: 50px;
+}
+
+p {
+font-size: 25px;
+}
+
+/*modo noturno*/
+body.noturno {
+    background-color: #171717;
+    color: #f5f5f5;
+    font-family: Arial, sans-serif;
+}
+header.noturno {
+    background-color: #171717;
+    border-bottom: 1px solid #383838;
+}
+#tema.noturno{
+  background-color: #171717;
+  color:#f5f5f5;
+}
+
+nav.noturno a{
+  color: #f5f5f5;
+}
