@@ -10,6 +10,19 @@ body {
     color: #171717;
     font-family: Arial, sans-serif;
 }
+main{
+    width: 75%;
+    max-width: 1100px;
+    min-height: 100vh;
+
+    margin: auto;
+    padding: 40px;
+
+    background-color: #ffffff;
+
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
 header {
     background-color: #f5f5f5;
     border-bottom: 1px solid #ada9a9;
@@ -31,6 +44,10 @@ header {
   box-sizing:content-box;
   width: 90px;
   white-space: nowrap;
+  transition: scale 0.3s;
+}
+#tema:hover{
+  scale: 1.1;
 }
 #sobre div{
   display: flex;
@@ -43,7 +60,7 @@ header {
  width:80%;
 }
 #sobre img{
-  height: 400px;
+  height: auto;
   width: 400px;
   border-radius: 50px;
   border: #ada9a9 solid 5px;
@@ -61,7 +78,7 @@ nav a {
 }
 
 nav a:hover, nav.noturno a:hover {
-    color: #ed1232;
+    color: #e6354f;
 }
 
 /* Seções */
@@ -86,12 +103,171 @@ h2 {
 p {
 font-size: 25px;
 }
+a{
+  text-decoration: none;
+}
 
+section h1,section h2 {
+    transition: color 0.3s ;
+}
+
+section:hover h1,section:hover h2{
+    color: #e6354f;
+}
+.projetos{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    gap: 30px;
+    margin: 40px 0px;
+    width: 100%;
+}
+.card-projeto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    padding: 10px;
+    border: 4px solid gray;
+    border-radius: 12px;
+
+    text-decoration: none;
+    color: black;
+
+    transition: 0.3s;
+}
+
+.card-projeto img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.card-projeto:hover,.card-projeto.noturno:hover {
+    transform: scale(1.05);
+    border-color: #e6354f;
+    color: #e6354f;
+}
+#abrir{
+  width: 20%;
+  margin-top: 50px;
+  margin-left: 80%;
+  border-radius: 15px;
+  font-weight: bolder;
+  box-sizing:content-box;
+  background-color: #e6354f;
+  color:#f5f5f5;
+  padding: 10px;
+  border-style: none;
+  transition: scale 0.3s, color 0.3s;
+}
+#abrir:hover{
+  scale:1.1;
+  border: 2px solid #171717;
+  color:#171717
+}
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+dialog{
+  background-color: #949191;
+  color: #171717;
+  position: fixed;
+  margin: auto;
+  padding: 30px;
+  border-radius: 15px;
+  border-style: none;
+}
+
+dialog h3{
+  font-size: 25px;
+}
+dialog form {
+    margin: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+#header-form{
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: end;
+}
+
+#fechar{
+  margin: 5px auto 5px 10px;
+  width: 10px;
+  border-radius: 5px;
+  font-weight: bolder;
+  box-sizing:content-box;
+  background-color: #171717;
+  color:#f5f5f5;
+  border-style: none;
+  padding: 10px;
+  transition: scale 0.3s, color 0.3s;
+  opacity: 0.6  ;
+}
+
+#fechar:hover{
+  scale: 1.1;
+  opacity: 1;
+}
+#form-button{
+  border-radius: 15px;
+  font-weight: bolder;
+  box-sizing:content-box;
+  background-color: #e6354f;
+  color:#f5f5f5;
+  padding: 10px;
+  width: 100%;
+  border-style: none;
+  transition: color 0.3s;
+}
+#form-button:hover{
+ border: 2px solid #171717;
+  color:#171717
+}
+
+dialog form textarea{
+  width: 625px;
+  height: 196px;
+  resize: none;
+}
+dialog form input{
+
+   width: 100%;
+  height: 30px;
+}
+.inp{
+  background-color: #f5f5f5;
+  border-style: none;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 0px;
+}
+dialog form label{
+  margin: 0;
+  font-weight: bold;
+  font-size: 18px;
+}
+.inp:focus{
+  outline: none;
+  border: 2px solid #e6354f;
+}
 /*modo noturno*/
 body.noturno {
-    background-color: #171717;
+    background-color: #131313;
     color: #f5f5f5;
     font-family: Arial, sans-serif;
+}
+main.noturno{
+  background-color: #171717;
 }
 header.noturno {
     background-color: #171717;
@@ -100,6 +276,26 @@ header.noturno {
 #tema.noturno{
   background-color: #171717;
   color:#f5f5f5;
+}
+#sobre.noturno img{
+  border-color: #111111;
+}
+.card-projeto.noturno{
+  color: #f5f5f5;
+  border-color: #111111;
+}
+#abrir.noturno:hover{
+  scale:1.1;
+  border: 2px solid #f5f5f5;
+  color:#f5f5f5
+}
+dialog.noturno{
+  background-color: #171717;
+  color: #f5f5f5;
+}
+dialog.noturno #fechar{
+  background-color: #6e6e6e;
+  color:#171717;
 }
 
 nav.noturno a{
