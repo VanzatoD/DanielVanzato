@@ -1,8 +1,9 @@
 
-// modo noturno
+// constantes declaradas para alterar entre os temas visuais.
 const botaoTema = document.querySelector("#tema");
 const elementos = document.querySelectorAll("body, main, header, #tema, nav, #github, #sobre, .card-projeto, dialog, #abrir");
 const git = document.querySelector("#github");
+// constantes para a verificação e alertas do formulário.
 const dialog = document.getElementById("form-contato");
 const formContato = document.querySelector("#cform");
 const nome = document.querySelector("#cname");
@@ -10,6 +11,7 @@ const email = document.querySelector("#email");
 const mensagem = document.querySelector("#msg");
 const resposta = document.querySelector("#resposta");
 
+//alternar modo noturno
 botaoTema.addEventListener("click", function() {
 
   elementos.forEach(function(elemento){
@@ -27,13 +29,7 @@ botaoTema.addEventListener("click", function() {
   });
 });
 
-  if (document.body.classList.contains("noturno")) {
-
-    } else {
-
-    }
-
-
+//acessar o contato
 document.getElementById("abrir").addEventListener("click", () => {
   dialog.showModal();
 });
@@ -41,8 +37,7 @@ document.getElementById("fechar").addEventListener("click", () => {
   dialog.close();
 });
 
-
-
+//verificação e resposta
 formContato.addEventListener("submit", function(event) {
     console.log("evento disparado")
     event.preventDefault();
