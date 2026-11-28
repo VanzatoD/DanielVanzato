@@ -123,6 +123,8 @@ section:hover h1,section:hover h2{
     flex-direction: column;
     align-items: center;
     gap: 10px;
+    height: 100%;
+    box-sizing: border-box;
 
     padding: 10px;
     border: 4px solid gray;
@@ -329,12 +331,13 @@ nav.noturno a{
   h1 {
       font-size: 50px;
   }
-  span{
-    font-size: 12px;
-  }
+
   #abrir{
     width: 30%;
     margin-left: 60%;
+  }
+  dialog form textarea{
+    width: 100%;
   }
 }
 /*celular*/
@@ -373,5 +376,11 @@ nav.noturno a{
     font-size: 12px;
     width: 40%;
     margin-left: 50%;
+  }
+  dialog form textarea{
+    width: 100%;
+  }
+  #fechar{
+    margin-right: 10px;
   }
 }
